@@ -1,0 +1,12 @@
+.flex {
+    margin: 20px auto;
+    margin-top: 30px;
+    padding: 20px auto;
+    border: blue 3px;
+}
+
+@media screen and (max-width: 800px) {
+    .report {
+        width: 100%;
+    }
+}
