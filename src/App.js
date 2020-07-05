@@ -60,7 +60,11 @@ function App() {
       </div>
       <div className="App">
         <form onSubmit={handleform} id="form">
-          <input type="text" name="country" />
+          <input
+            type="text"
+            name="country"
+            placeholder="Enter a country name"
+          />
           <br />
           <button className="btn btn-primary btn-lg" type="submit">
             Search For Cases
