@@ -18,8 +18,8 @@
 }
 
 .container-chart {
-    display: flex;
     justify-content: center;
     width: auto;
+    height: auto;
     background-color: white;
 }
