@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 .App {
     text-align: center;
-    font-family: sans-serif;
+    font-family: "Alata", sans-serif;
     background-color: rgba(0, 0, 0, 0.9);
     margin-top: -2em;
+}
+
+.content {
+    font-family: "Alata", sans-serif;
 }
 
 #form input {
@@ -20,6 +25,7 @@
 .container-chart {
     justify-content: center;
     width: 100%;
+    font-family: "Alata", sans-serif;
     height: auto;
     background-color: white;
     margin: 2px auto;

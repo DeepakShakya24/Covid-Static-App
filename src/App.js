@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Report from "./components/Report";
-//import { Grid } from "@material-ui/core/";
 import "./App.css";
-//import Chart from "./components/Chart";
 import { Bar } from "react-chartjs-2";
+import axios from "axios";
 
 function App() {
   const [country, setcountry] = useState("");
   const [recovered, setrecovered] = useState("");
   const [active, setactive] = useState("");
   const [deaths, setdeaths] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const virusData = await axios.get(
+        "https://corona.lmao.ninja/v2/countries/India?yesterday&strict&query%20"
+      );
+      setcountry(virusData.data.country);
+      setactive(virusData.data.cases);
+      setrecovered(virusData.data.recovered);
+      setdeaths(virusData.data.deaths);
+    };
+    fetchData();
+  }, []);
 
   const handleform = (event) => {
     event.preventDefault();
@@ -30,30 +42,30 @@ function App() {
       .catch((error) => console.error(error));
   };
   return (
-    <div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Precautions for Covid-19</h1>
-          <ul class="lead">
+    <div className="content">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1 className="display-4">Precautions for Covid-19</h1>
+          <ul className="lead">
             <li>
-              <p class="lead">
+              <p className="lead">
                 Clean your hands often. Use soap and water, or an alcohol-based
                 hand rub.
               </p>
             </li>
             <li>
-              <p class="lead">
+              <p className="lead">
                 Maintain a safe distance from anyone who is coughing or
                 sneezing.
               </p>
             </li>
             <li>
-              <p class="lead">
+              <p className="lead">
                 Wear a mask when physical distancing is not possible.
               </p>
             </li>
             <li>
-              <p class="lead">Don’t touch your eyes, nose or mouth.</p>
+              <p className="lead">Don’t touch your eyes, nose or mouth.</p>
             </li>
           </ul>
         </div>

@@ -1,8 +1,6 @@
 import React from "react";
 import "./Report.css";
 import CountUp from "react-countup";
-//import { Grid, Card, CardContent, Typography } from "@material-ui/core/";
-//import CountUp from "react-countup";
 const Report = (props) => {
   return (
     <div className="card flex" style={{ width: "18rem" }}>
