@@ -67,6 +67,12 @@ function App() {
             <li>
               <p className="lead">Don’t touch your eyes, nose or mouth.</p>
             </li>
+            <li>
+              <p className="lead">
+                If you have a fever, cough and difficulty breathing, seek
+                medical attention.
+              </p>
+            </li>
           </ul>
         </div>
       </div>
